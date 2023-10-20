@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table.chessboard {
+      border-collapse: collapse;
+      width: fit-content;
+      height: fit-content;
+      border: 1px solid #A51119;
+      margin: 0 auto;
+    }
+
+    td.square {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 400;
+      border: 0;
+    }
+
+    td.red {
+      background-color: #A51119;
+    }
+
+    td.white {
+      background-color: #FFF;
+    }
+
+    td.white-piece {
+      color: #FFF;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="chessboard">
+    <tbody>
+      <tr>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red">♞</td>
+        <td class="square white"></td>
+        <td class="square red white-piece">♘</td>
+        <td class="square white"></td>
+        <td class="square red">♚</td>
+      </tr>
+
+      <tr>
+        <td class="square red">♟</td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white">♝</td>
+        <td class="square red">♟</td>
+        <td class="square white">♟</td>
+      </tr>
+
+      <tr>
+        <td class="square white"></td>
+        <td class="square red">♟</td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white">♜</td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+
+      </tr>
+      <tr>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white">♘</td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+
+      </tr>
+      <tr>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white">♙</td>
+        <td class="square red"></td>
+
+      </tr>
+      <tr>
+        <td class="square red"></td>
+        <td class="square white">♙</td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white">♙</td>
+
+      </tr>
+      <tr>
+        <td class="square white">♙</td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red white-piece">♙</td>
+        <td class="square white">♞</td>
+        <td class="square red"></td>
+
+      </tr>
+      <tr>
+        <td class="square red white-piece">♗</td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red"></td>
+        <td class="square white"></td>
+        <td class="square red white-piece">♖</td>
+        <td class="square white">♔</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

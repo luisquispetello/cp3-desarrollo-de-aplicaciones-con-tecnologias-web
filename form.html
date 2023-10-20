@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Basic styling for form elements */
+    form {
+      display: none;
+      /* Initially hide all forms */
+      width: 400px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="radio"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    /* Styling for checkboxes */
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    /* Styling for the "Aceptar" button */
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Styling for the form container */
+    .form-container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Styling for the step indicator */
+    .form-steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 1em 2.5em 1em;
+      margin-bottom: 1em;
+      background: #e0ebff
+    }
+
+    .form-steps .line:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+
+    .form-steps .line:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      background-color: royalblue;
+      color: royalblue;
+      border-radius: 50%;
+      width: 1.1em;
+      height: 1.1em;
+      text-align: center;
+      margin: 0 .4em;
+    }
+
+    .step-label {
+      margin-top: 10px;
+      font-size: 1em;
+      color: royalblue;
+      text-align: center;
+      font-weight: 900;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      position: absolute;
+      top: 1em;
+      left: .36em;
+    }
+
+    .line {
+      flex-grow: 1;
+      height: .5em;
+      background-color: royalblue;
+    }
+
+    /* Styling for the "Next" button */
+    .next-button {
+      display: none;
+      /* Initially hide the "Next" button */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-steps">
+    <div class="line"></div>
+    <div class="step" data-step="1">
+      <div class="step-label">1</div>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-step="2">
+      <div class="step-label">2</div>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-step="3">
+      <div class="step-label">3</div>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-step="4">
+      <div class="step-label">4</div>
+    </div>
+    <div class="line"></div>
+    <div class="step" data-step="5">
+      <div class="step-label">5</div>
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="form-container">
+
+    <!-- Form for Step 1 -->
+    <form class="step-form" data-step="1">
+      <h2>Paso1: Información personal</h2>
+      <h3>Información personal responsable grupo</h3>
+
+      <br>
+
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos" name="apellidos">
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="idper">ID Per</label>
+      <input type="text" id="idper" name="idper">
+
+      <label for="vuelo">Vuelo</label>
+      <input type="text" id="vuelo" name="vuelo">
+
+      <label for="fecha">Fecha</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="email1">Email 1</label>
+      <input type="email" id="email1" name="email1">
+
+      <label for="email2">Email 2</label>
+      <input type="email" id="email2" name="email2">
+
+      <label for="dstNoSp">DstNoSp</label>
+      <input type="text" id="dstNoSp" name="dstNoSp">
+
+      <label for="terms">Terms</label>
+      <input type="checkbox" id="terms" name="terms">
+
+      <input type="button" class="next-button" value="Next">
+    </form>
+
+    <!-- Form for Step 2 -->
+    <form class="step-form" data-step="2">
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos" name="apellidos">
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="sexo">Sexo</label>
+      <select id="sexo" name="sexo">
+        <option value="M">M</option>
+        <option value="F">F</option>
+      </select>
+
+      <label for="idper">ID Per</label>
+      <input type="text" id="idper" name="idper">
+      <input type="button" class="next-button" value="Next">
+    </form>
+
+    <!-- Form for Step 3 -->
+    <form class="step-form" data-step="3">
+
+      <label for="linea">Linea</label>
+      <input type="text" id="linea" name="linea">
+
+      <label for="vuelo">Vuelo</label>
+      <input type="text" id="vuelo" name="vuelo">
+
+      <label for="asiento">Asiento</label>
+      <input type="text" id="asiento" name="asiento">
+
+      <label for="fllegada">Fllegada</label>
+      <input type="text" id="fllegada" name="fllegada">
+
+      <label for="hotel">Hotel</label>
+      <input type="text" id="hotel" name="hotel">
+
+      <label for="callenro">Callenro</label>
+      <input type="text" id="callenro" name="callenro">
+
+      <label for="nropiso">Nropiso</label>
+      <input type="text" id="nropiso" name="nropiso">
+
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" name="ciudad">
+
+      <label for="comunidad">Comunidad</label>
+      <input type="text" id="comunidad" name="comunidad">
+
+      <label for="provincia">Provincia</label>
+      <input type="text" id="provincia" name="provincia">
+
+      <label for="cp">CP</label>
+      <input type="text" id="cp" name="cp">
+
+      <label for="dirpte">Dirpte</label>
+      <input type="text" id="dirpte" name="dirpte">
+      <input type="button" class="next-button" value="Next">
+    </form>
+
+    <!-- Form for Step 4 -->
+    <form class="step-form" data-step="4">
+      <label for="orgPais">OrgPais</label>
+      <input type="text" id="orgPais" name="orgPais">
+
+      <label for="pais1">Pais1</label>
+      <input type="text" id="pais1" name="pais1">
+
+      <label for="pais2">Pais2</label>
+      <input type="text" id="pais2" name="pais2">
+
+      <label for="pais3">Pais3</label>
+      <input type="text" id="pais3" name="pais3">
+
+      <label for="pais4">Pais4</label>
+      <input type="text" id="pais4" name="pais4">
+
+      <label for="motivo">Motivo</label>
+      <select id="motivo" name="motivo">
+        <option value="turismo">Turismo</option>
+        <option value="trabajo">Trabajo</option>
+        <option value="visita">Visita</option>
+        <option value="mision">Misión</option>
+        <option value="cooperacion">Cooperación</option>
+        <option value="otros">Otros</option>
+      </select>
+      <input type="button" class="next-button" value="Next">
+    </form>
+
+    <!-- Form for Step 5 -->
+    <form class="step-form" data-step="5">
+
+      <label for="contacto">Contacto</label>
+      <input type="checkbox" id="contacto" name="contacto">
+
+      <label for="sintomas">Síntomas</label>
+      <input type="checkbox" id="sintomas" name="sintomas">
+
+      <label for="fiebre">Fiebre</label>
+      <input type="text" id="fiebre" name="fiebre">
+
+      <label for="respiratoria">Respiratoria</label>
+      <input type="text" id="respiratoria" name="respiratoria">
+
+      <label for="tos">Tos</label>
+      <input type="text" id="tos" name="tos">
+
+      <label for="visita">Visita</label>
+      <input type="checkbox" id="visita" name="visita">
+
+      <label for="enContacto">En Contacto</label>
+      <input type="text" id="enContacto" name="enContacto">
+
+      <label for="sinContacto">Sin Contacto</label>
+      <input type="text" id="sinContacto" name="sinContacto">
+
+      <label for="sospecha">Sospecha</label>
+      <input type="text" id="sospecha" name="sospecha">
+
+      <label for="otrosMotivos">Otros Motivos</label>
+      <input type="text" id="otrosMotivos" name="otrosMotivos">
+
+      <label for="prueba">Prueba</label>
+      <input type="checkbox" id="prueba" name="prueba">
+
+      <input type="button" class="next-button" value="Aceptar">
+    </form>
+
+  </div>
+
+  <script>
+    const steps = document.querySelectorAll(".step");
+    const stepForms = document.querySelectorAll(".step-form");
+    const nextButtons = document.querySelectorAll(".next-button");
+
+    let currentStep = 1;
+
+    function showStep(stepNumber) {
+      stepForms.forEach((form) => {
+        form.style.display = "none";
+      });
+      stepForms[stepNumber - 1].style.display = "block";
+    }
+
+    function updateStepIndicators() {
+      steps.forEach((step) => {
+        step.classList.remove("active");
+      });
+      steps[currentStep - 1].classList.add("active");
+    }
+
+    function handleNextButton() {
+      currentStep++;
+      if (currentStep <= stepForms.length) {
+        showStep(currentStep);
+        updateStepIndicators();
+      }
+      if (currentStep === stepForms.length) {
+        nextButtons[currentStep - 1].style.display = "none";
+      }
+    }
+
+    nextButtons.forEach((button) => {
+      button.addEventListener("click", handleNextButton);
+    });
+
+    showStep(currentStep);
+    updateStepIndicators();
+  </script>
+</body>
+
+</html>
